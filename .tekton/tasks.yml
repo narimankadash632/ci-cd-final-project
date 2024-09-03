@@ -17,3 +17,7 @@ spec:
       runAsNonRoot: false
       runAsUser: 0
     script: |
+      #!/bin/bash
+      set -name:python -m pip install --upgrade pip wheel
+      pip install -r requerements.txt
+      nosetest $(param.args)
